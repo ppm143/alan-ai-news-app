@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Typography } from '@material-ui/core';
 import wordsToNumbers from 'words-to-numbers';
 import alanBtn from '@alan-ai/alan-sdk-web';
-
+import logo from '../src/Images/news-app-home.jpg'
 
 import NewsCards from './components/NewsCards/NewsCards';
 import useStyles from './styles';
@@ -47,7 +47,7 @@ const App = () => {
                         <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Go back</Typography></div>
                     </div>
                 ) : null}
-                <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="logo" />
+                <img src={logo} className={classes.alanLogo} alt="Alan News App Logo" />
             </div>
             <NewsCards articles={newsArticles} activeArticle={activeArticle} />
 
